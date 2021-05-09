@@ -11,7 +11,7 @@ BOT    = commands.Bot('')
 def generate_assets():
 
     for letter in 'kqrbnpKQRBNP':
-        source = 'assets/Chess_{}{}t60.png'.format(letter, ['d', 'l'][letter.isupper()])
+        source = 'assets/Chess_{}{}t60.png'.format(letter.lower(), ['d', 'l'][letter.isupper()])
         ASSETS[letter] = Image.open(source)
 
     ASSETS['board'] = Image.open('assets/board.png').resize((504, 504))
