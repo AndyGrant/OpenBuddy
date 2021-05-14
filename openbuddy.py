@@ -69,7 +69,7 @@ async def bot_fen_to_image(message):
 
 async def bot_opening_to_image(message):
 
-    pattern = "(\d+\.\s*((([BKNQR]?[a-h]?[1-8]?(x)?[a-h][1-8](=)?[NBRQ]?)|(O-O)|(O-O-O))(\+)?\s*(\{.*\}\s*)?){1,2})+"
+    pattern = "(\d+\.\s*((([BKNQR]?[a-h]?[1-8]?(x)?[a-h][1-8](=)?[NBRQ]?)|(O-O-O)|(O-O))(\+)?\s*(\{.*\}\s*)?){1,2})+"
 
     match = re.search(pattern, message.content)
     if match == None: return
